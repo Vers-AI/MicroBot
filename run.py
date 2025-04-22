@@ -17,7 +17,7 @@ sys.path.append("ares-sc2")
 
 import yaml
 
-from bot.main import MyBot
+from bot.main import Overclock
 from ladder import run_ladder_game
 
 plt = platform.system()
@@ -58,7 +58,7 @@ def main():
             if MY_BOT_RACE in config:
                 race = Race[config[MY_BOT_RACE].title()]
 
-    bot1 = Bot(race, MyBot(), bot_name)
+    bot1 = Bot(race, Overclock(), bot_name)
 
     if "--LadderServer" in sys.argv:
         # Ladder game started by LadderManager
@@ -85,7 +85,7 @@ def main():
             # see if user has any recent ladder maps
             map_list: List[str] = [
                 "Tier1MicroAIArena_v6",
-                "Tier2MicroAIArena_v6",
+                #"Tier2MicroAIArena_v6",
             ]
 
         random_race = random.choice([Race.Zerg, Race.Terran, Race.Protoss])

@@ -1,8 +1,5 @@
 {
     "typeCheckingMode": "basic",
-    "exclude": [
-        "bot/Episodes/**"
-    ],
     "extraPaths": [
         "ares-sc2/src/ares",
         "ares-sc2/src",
